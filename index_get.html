@@ -1,0 +1,189 @@
+<div style="white-space:pre">
+    {
+      "citizen" : [
+        { 
+          "firstname": "Mabel",
+		  "lastname": "Kimble",
+		  "hobbies": [
+			"singing",
+			"sewing",
+			"travelling"
+		  ]
+          },
+        { 
+			"firstname": "Daniel", 
+			"lastname": "Gregersen",
+			"hobbies": [
+			"crafting",
+			"seafaring",
+			"cooking"
+		  ]
+          },
+        { 
+          "artistname" : "Snoop Dogg",
+          "born" : "1971"
+          }
+      ]
+    }
+</div>
+
+<!--
+<p id="xyz2"></p>
+
+<p id="demok"></p>
+<p id="demot"></p>
+<p id="gree"></p>
+<p id="demomno"></p>
+
+<p id="demokj"></p>
+<p id="demojk"></p>
+
+<p id="demoj"></p>
+<p id="demojj"></p>
+-->
+
+<p id="demojjj"></p>
+<p id="demokkk"></p>
+
+
+
+
+<!--
+<button onclick="aFunction()">!</button>
+<button onclick="bFunction()">!!</button>
+<button onclick="cFunction()">!!!</button>
+-->
+
+<form action="/index-post.html" method="post">
+    <input type="submit" id="xyz" value="1" onclick="bFunction()">
+    <input type="submit" id="iop" value="2" onclick="cFunction()">
+</form>
+
+<script>
+var xcv = document.getElementById("iop").value;
+// document.getElementById("demot").innerHTML = xcv;
+localStorage.serialNumberrrr = xcv;
+
+var datax = 
+    {
+      "citizen" : [
+        { 
+          "firstname": "Mabel",
+		  "lastname": "Kimble",
+		  "hobbies": [
+			"singing",
+			"sewing",
+			"travelling"
+		  ]
+          },
+        { 
+			"firstname": "Daniel", 
+			"lastname": "Gregersen",
+			"hobbies": [
+			"crafting",
+			"seafaring",
+			"cooking"
+		  ]
+          },
+        { 
+          "artistname" : "Snoop Dogg",
+          "born" : "1971"
+          }
+      ]
+    }
+    
+/*
+
+*/
+
+var obje = {
+	"userId": 1,
+	"title": "I am a title"
+}
+var res1 = Object.values(obje)
+var res2 = Object.keys(obje)
+/*
+document.getElementById("demokj").innerHTML = res1
+document.getElementById("demojk").innerHTML = res2
+
+document.getElementById("demoj").innerHTML = datax.citizen[1].hobbies[2];
+localStorage.serialNumberxzx = datax.citizen[1].hobbies[2];
+
+document.getElementById("demojj").innerHTML = datax.citizen[0];
+*/
+for (let j = 0; j < 3; j++) {
+	document.getElementById("demojjj").innerHTML += datax.citizen[0].hobbies[j];
+	document.getElementById("demokkk").innerHTML += datax.citizen[1].hobbies[j];
+}
+
+/*
+for(var k in obje){
+	document.getElementById('keys').innerHTML += k + ' ,';
+	document.getElementById('values').innerHTML += obje[k] + ' ,';
+}
+*/
+
+/*
+return (
+	<div>
+		<p><strong>Using Object.values:</strong></p>
+		{Object.values(datax).map(value => (<div>{value}</div>))}
+		
+		<p><strong>Using Object.keys:</strong></p>
+		{Object.keys(datax).map(key => (<div>{key} : {datax[key]}</div>))}
+	</div>
+	);
+*/
+
+
+
+
+document.getElementById("demomno").innerHTML = datax.citizen[0].hobbies[1];
+
+if (valuex="2") {
+	greetingx = "Goodx";
+} else if (valuex="1") {
+	greetingx = "Betterx";
+} else {
+	greetingx = "Badx";
+}
+
+document.getElementById("gree").innerHTML = greetingx;
+
+
+if (value="2") {
+ greeting = "Good";
+ greetvalue = 2;
+} else if (value="1") {
+	greeting = "Better";
+	greetvalue = 1;
+} else {
+	greeting = "Bad";
+	greetvalue = 0;
+}
+/*
+document.getElementById("demok").innerHTML = greetvalue;
+localstorage.serialNumberyy = greetvalue;
+*/
+
+
+function aFunction() {
+	var x = document.getElementById("iop").value;
+	document.getElementById("xyz2").innerHTML = x;
+	localstorage.serialNumberyy = x;
+}
+/*
+var xzv = document.getElementById("xyz").value;
+localStorage.serialNumberyyy = xzv;
+*/
+function bFunction() {
+	var xzv = document.getElementById("xyz").value;
+	localStorage.serialNumberyyy = xzv;
+}
+function cFunction() {
+	var xyv = document.getElementById("iop").value;
+	localStorage.serialNumberyyy = xyv;
+}
+</script>
+
+
