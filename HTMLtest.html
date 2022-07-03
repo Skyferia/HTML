@@ -1,0 +1,258 @@
+<form action="C:\Users\Baven\Desktop\display.html" method="post">
+
+    <input type="submit" value="1">
+    
+</form>
+
+<p id="demo"></p>
+<p id="demox"></p>
+<p id="demoz"></p>
+<p id="demog"></p>
+<p id="demoj"></p>
+<div id="result"></div>
+
+<script>
+	var citizen = {
+  "firstname": "Mabel",
+  "lastname": "Kimble",
+  /*
+  "hobbies": [
+    {
+      "name": "admin",
+      "id": 1
+    },
+    {
+      "name": "sales",
+      "id": 2
+    }
+  ],*/
+  "hobbies": [
+    "singing",
+    "sewing",
+    "travelling"
+  ],
+  
+  "childrens": [
+    "playing",
+	"crying"
+  ]
+}
+	document.getElementById("demog").innerHTML = citizen.childrens[0];
+/*	
+var datax = 
+    {
+      "artists" : [
+        { 
+          "artistname" : "Leonard Cohen",
+          "born" : "1934"
+          },
+        { 
+          "artistname" : "Joe Satriani",
+          "born" : "1956" 
+          },
+        { 
+          "artistname" : "Snoop Dogg",
+          "born" : "1971"
+          }
+      ]
+    }
+
+document.getElementById("demoj").innerHTML = datax.artists[0].artistname;
+*/
+var datax = 
+    {
+      "citizen" : [
+        { 
+          "firstname": "Mabel",
+		  "lastname": "Kimble",
+		  "hobbies": [
+			"singing",
+			"sewing",
+			"travelling"
+		  ]
+          },
+        { 
+			"firstname": "Daniel", 
+			"lastname": "Gregersen",
+			"hobbies": [
+			"crafting",
+			"seafaring",
+			"cooking"
+		  ]
+          },
+        { 
+          "artistname" : "Snoop Dogg",
+          "born" : "1971"
+          }
+      ]
+    }
+
+document.getElementById("demoj").innerHTML = datax.citizen[1].hobbies[2];
+</script>	
+
+<script>
+	// var myJSON = '{"name":"John", "age":30, "car":null}';
+	var myJSON = '{"name":"John", "age":30, "car":null}';
+	var myObj = JSON.parse(myJSON);
+	document.getElementById("demo").innerHTML = myObj.name;
+
+
+	var jcontent = {
+	"firstName": "John",
+	"lastName": "Smith",
+	"hobby": {
+		"reading" : true,
+		"gaming" : false,
+		"sport" : [
+				"football", 
+				"baseball"
+			]
+		},
+	"lastNamex": "Smithx"
+}
+document.getElementById("demox").innerHTML = jcontent.lastNamex;
+document.getElementById("demoz").innerHTML = jcontent.hobby.sport[1];
+/*	
+	var jcontent = {
+	"firstName": "John",
+	"lastName": "Smith",
+	"hobby": [
+		{
+			"reading" : true,
+			"gaming" : false,
+			"sport" : [
+				"football", 
+				"baseball"
+			]
+		},	
+		{
+			"reading" : false,
+			"gaming" : true,
+			"sport" : [
+				"tennis", 
+				"badminton"
+			]
+		}
+	]
+}	
+*/	
+/*
+var myJSONx = {
+	  "citizen": [ 
+		
+		 { 
+			"firstname": "Mabel", 
+			"lastname": "Kimble",
+			"hobbies": [
+			"singing",
+			"sewing",
+			"travelling"
+		  ]
+		 }, 
+		
+		 { 
+			"firstname": "Daniel", 
+			"lastname": "Gregersen",
+			"hobbies": [
+			"crafting",
+			"seafaring",
+			"cooking"
+		  ]
+		 } 
+	  ]   
+	}
+*/
+
+
+	// Check browser support
+	if (typeof(Storage) !== "undefined") {
+	// Store
+	localStorage.setItem("lastname", "Smith");
+	// Retrieve
+	document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+	} else {
+	document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+	}
+</script>
+
+<script>    
+   // localStorage.setItem("serialNumberx", "abc123def456");
+   localStorage.serialNumberxx = '0x1x00';
+   
+</script>
+
+<form action="display.html">
+    <input type="text" name="serialNumberxzx" />
+    <input type="submit" value="Submit" />
+</form>
+
+<!--
+<form action="display.html">
+    <input type="text" name="serialNumber" />
+    <input type="submit" value="Submit" />
+</form>
+-->
+
+
+
+<!--
+
+var data = localStorage.getItem("object_name");
+localStorage.clear(); //clean the localstorage
+var value1 = JSON.parse(data).key1;
+var value2 = JSON.parse(data).key2;
+
+-->
+
+
+
+
+
+<!--
+<div id="resultx">xyz</div>
+
+<script>
+	function getData()
+	{
+		//gettting the values
+		var email = document.getElementById("email").value;
+		var password= document.getElementById("password").value; 
+		var telephone= document.getElementById("telephone").value; 
+		var mobile= document.getElementById("mobile").value; 
+		//saving the values in local storage
+		localStorage.setItem("txtValue", email);
+		localStorage.setItem("txtValue1", password);
+		localStorage.setItem("txtValue2", mobile);
+		localStorage.setItem("txtValue3", telephone);   
+	}
+
+	input{
+		font-size: 25px;
+	}
+	label{
+		color: rgb(16, 8, 46);
+		font-weight: bolder;
+	}
+	#data{
+
+	}
+
+</script>
+
+<fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
+	<form action="display.html">
+		<legend>Sign Up Form</legend>
+		<label>Email:<br />
+		<input type="text" name="email" id="email"/></label><br />
+		<label>Password<br />
+		<input type="text" name="password" id="password"/></label><br>
+		<label>Mobile:<br />
+		<input type="text" name="mobile" id="mobile"/></label><br />
+		<label>Telephone:<br />
+		<input type="text" name="telephone" id="telephone"/></label><br> 
+		<input type="submit" value="Submit" onclick="getData()">
+	</form>
+</fieldset>
+
+<a href="display.html?greeting=hello">go to second page</a>
+-->
